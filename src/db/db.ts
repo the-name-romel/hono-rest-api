@@ -1,4 +1,3 @@
-import "dotenv/config";
 import { drizzle } from "drizzle-orm/node-postgres";
 import { Pool } from "pg";
 import * as schema from "@/db/schema";
@@ -8,7 +7,7 @@ export const pool = new Pool({
   max: 10,
   idleTimeoutMillis: 30000,
 });
-const db = drizzle(pool, {
+export const db = drizzle(pool, {
   schema,
   casing: "snake_case",
 });
