@@ -1,0 +1,12 @@
+services:
+  postgres:
+    image: postgres:17.5
+    restart: unless-stopped
+    container_name: hono-todo-postgres
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: todos
+    ports:
+    #// changed the port to 5433 from 5432 
+      - "5433:5432"

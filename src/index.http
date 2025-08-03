@@ -1,1 +1,34 @@
-http://localhost:3000
+POST http://localhost:3000/api/todos
+Content-Type: application/json
+
+{
+    "title": "do some testing again",
+    "description": "testing again"
+}
+
+###
+
+GET http://localhost:3000/api/todos
+
+###
+
+POST http://localhost:3000/api/auth/sign-in/email
+Content-Type: application/json
+
+{
+    "email": "test@test.com",
+    "password": "password123"
+}
+
+###
+
+POST http://localhost:3000/api/auth/sign-up/email
+Content-Type: application/json
+
+{
+    "name": "Test2",
+    "email": "test@test.com",
+    "password": "password123"
+}
+
+
