@@ -13,6 +13,8 @@ todos.get("/", async (c) => {
 
   try {
     const todoList = await getTodoByUserId(user.id);
+
+    return c.json(todoList);
   } catch (error) {
     console.error("Error fetching todos:", error);
     return c.json({ error: "Failed to fetch todos" }, 500);
